@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Makes the website look good on phones -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sweet House | Fresh Homemade Sweets</title>
+
+    <!-- Website styling -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- App icon / PWA -->
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+            🍬 Sweet House
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#products">Sweets</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <button class="cart-button" onclick="openCart()">
+            🛒 Cart
+            <span id="cart-count">0</span>
+        </button>
+
+    </header>
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="small-title">FRESH • HOMEMADE • DELICIOUS</p>
+
+            <h1>
+                Sweet moments,
+                <span>made delicious.</span>
+            </h1>
+
+            <p>
+                Enjoy our delicious selection of traditional sweets
+                and snacks, freshly prepared for you.
+            </p>
+
+            <a href="#products" class="hero-button">
+                Order Now
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PRODUCTS ================= -->
+
+    <section class="products-section" id="products">
+
+        <div class="section-heading">
+
+            <p class="small-title">OUR MENU</p>
+
+            <h2>Choose Your Favourite</h2>
+
+            <p>
+                All items are Rs. 50 per 100g.
+            </p>
+
+        </div>
+
+
+        <div class="products" id="products-container">
+
+            <!-- Products will be automatically
+                 created using JavaScript -->
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about" id="about">
+
+        <h2>Made With Love ❤️</h2>
+
+        <p>
+            We prepare traditional sweets and snacks using
+            carefully selected ingredients and lots of love.
+        </p>
+
+    </section>
+
+
+    <!-- ================= CART ================= -->
+
+    <div class="cart-overlay" id="cart-overlay">
+
+        <div class="cart">
+
+            <button class="close-cart" onclick="closeCart()">
+                ✕
+            </button>
+
+            <h2>Your Cart 🛒</h2>
+
+            <div id="cart-items"></div>
+
+            <div class="cart-total">
+
+                <p>
+                    Total:
+                    <strong id="cart-total">Rs. 0</strong>
+                </p>
+
+            </div>
+
+
+            <!-- CUSTOMER DETAILS -->
+
+            <div class="customer-form">
+
+                <h3>Delivery Details</h3>
+
+                <input
+                    type="text"
+                    id="customer-name"
+                    placeholder="Your Name"
+                >
+
+                <input
+                    type="tel"
+                    id="customer-phone"
+                    placeholder="Phone Number"
+                >
+
+                <textarea
+                    id="customer-address"
+                    placeholder="Delivery Address"
+                    rows="4"
+                ></textarea>
+
+                <button
+                    class="order-button"
+                    onclick="placeOrder()"
+                >
+                    📱 Place Order on WhatsApp
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h3>🍬 Sweet House</h3>
+
+        <p>
+            Fresh sweets. Happy moments.
+        </p>
+
+        <p>
+            © 2026 Sweet House
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
